@@ -194,31 +194,31 @@ window.addEventListener('scroll', () => {
 });
 
 // Typing effect for hero title (optional enhancement)
-const heroTitle = document.querySelector('.hero-title');
-if (heroTitle) {
-    const originalText = heroTitle.innerHTML;
-    let isVisible = false;
+// const heroTitle = document.querySelector('.hero-title');
+// if (heroTitle) {
+//     const originalText = heroTitle.innerHTML;
+//     let isVisible = false;
     
-    const typeWriter = () => {
-        if (isVisible) return;
+//     const typeWriter = () => {
+//         if (isVisible) return;
         
-        heroTitle.innerHTML = '';
-        let i = 0;
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = originalText;
-        const textContent = tempDiv.textContent || tempDiv.innerText || '';
+//         heroTitle.innerHTML = '';
+//         let i = 0;
+//         const tempDiv = document.createElement('div');
+//         tempDiv.innerHTML = originalText;
+//         const textContent = tempDiv.textContent || tempDiv.innerText || '';
         
-        const typing = setInterval(() => {
-            if (i < textContent.length) {
-                heroTitle.innerHTML = originalText.substring(0, heroTitle.textContent.length + 1);
-                i++;
-            } else {
-                clearInterval(typing);
-            }
-        }, 50);
+//         const typing = setInterval(() => {
+//             if (i < textContent.length) {
+//                 heroTitle.innerHTML = originalText.substring(0, heroTitle.textContent.length + 1);
+//                 i++;
+//             } else {
+//                 clearInterval(typing);
+//             }
+//         }, 50);
         
-        isVisible = true;
-    };
+//         isVisible = true;
+//     };
     
     // Trigger typing effect when hero is in view
     const heroObserver = new IntersectionObserver((entries) => {
